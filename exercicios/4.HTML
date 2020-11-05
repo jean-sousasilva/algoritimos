@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 4. Crie um programa em HTML/JS o qual:
+    a) Pergunte o nome da pessoa que o usuário mais ama na vida
+    b) Pergunte o quanto o usuário a ama (um número inteiro)
+    c) Ao clicar num botão "Expressar amor", devem aparecer, abaixo dele, N vezes 
+    (conforme o valor em b)) a frase abaixo para a pessoa indicada em a), como neste exemplo 
+    (considerando o nome "Lady Gaga" e que ama "3")
+       Lady Gaga, eu te amo! Sempre lembre disso!
+       Lady Gaga, eu te amo! Sempre lembre disso!
+       Lady Gaga, eu te amo! Sempre lembre disso!
+     -->
+
+<input type="text" id="inpt">
+<input type="text" id="inpt1">
+<button onclick="amor()">clique</button>
+<div id="msg"></div>
+
+</body>
+</html>
+<script>
+    function amor() {
+        var nome =inpt.value;
+        var quantidade = Number(inpt1.value);
+        var contador = 0 ;
+
+        while(contador < quantidade){
+            contador ++;
+            msg.innerHTML +=`<br>${nome}, eu te amo! sempre lembre disso!`;
+        }
+    }
+</script>

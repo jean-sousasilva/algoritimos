@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 3. Crie um programa em HTML/JS o qual:
+    a) Pergunte o nome de um time de futebol que ache bom e de outro que ache ruim
+    b) Ao clicar num botão "Repetir a realidade!", exiba 10 vezes na tela um conteúdo parecido com este:
+       NOME TIME 1 é melhor do que NOME TIME 2
+       (replique as formatações desse exemplo) -->
+       <input type="text"id="inpt">
+       <input type="text" id="inpt1">
+    <button onclick="mostra()" >Clique</button>
+    <div id="msg"></div>
+</body>
+</html>
+<script>
+function mostra() {
+    var contador=0;
+    var time1= inpt.value; 
+    var time2= inpt1.value;
+    msg.innerHTML=""
+  while(contador<10){
+      contador++
+    msg.innerHTML+=`<br>${time1} é melhor que do que ${time2}`
+  }
+
+}
+
+
+
+
+
+
+</script>

@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Francois+One');
+@import url('https://fonts.googleapis.com/css?family=Baloo+Tamma');
+@import url('https://fonts.googleapis.com/css?family=Racing+Sans+One');
+
+body{
+   background-color: whitesmoke;
+}
+
+/*formatação do cabeçalho*/
+
+div#menu{
+    background-color: #888888; 
+    margin: -20px -8px auto -9px;
+    padding-bottom: 15px;
+    position: relative;
+    
+}
+nav ul{
+    list-style: none;
+    position: relative;
+    margin-left: 800px;
+    padding-top: 20px;
+}
+nav li{
+    display: inline-block;
+    padding: 10px;
+    color: white;
+    margin-top: 10px;
+    border: none;
+    font-family: 'Racing Sans One', cursive;
+}
+nav{
+    display: block;
+    margin-bottom: -20px;
+    
+}
+nav li:hover{
+    color: #022235;
+    transition: 1s;
+    text-decoration: underline;
+}
+
+/*Formatação da imagem de background*/
+
+div#interface{ 
+    background: url('inteligencia.jpg') no-repeat fixed;
+    background-size: 100%;
+    margin: auto -8px auto -9px;
+    padding-bottom: 600px;
+}
+h2#interface{
+    opacity: 1;
+    background-color: black;
+    top: 450px;
+    right: 550px;
+    color: white;
+    background-color: rgba(0,0,0,.4);
+    position: relative;
+    padding: 100px 450px 200px 540px;
+    margin-top: -450px;
+    margin-right: -548px;
+    margin-left: 500px;
+    margin-bottom: -150px;
+    font-family: 'Francois One', sans-serif;
+    font-size: 40px;
+    text-align: center;
+}
+/* Formatação das imagens*/
+figure{
+    display: flex;
+    flex-direction: row ;
+    margin-left: 15px;
+}
+
+img.corpo{
+    position:relative;
+    margin-left: 140px;
+}
+img#A{
+   width: 200px;
+   height: 150px;
+   border: solid 7px #ABABAB;
+   box-shadow: 0px 0px 10px black;
+}
+
+img#A:hover{
+    width: 250px;
+    height: 200px;
+    transition: 1s;
+}
+
+figcaption.imagem{
+    text-indent: 10px;
+    position: static;
+    width: 250px;
+    font-family: 'Baloo Tamma', cursive;
+    color: #494A4A;
+    display: flex;
+    flex-direction: row;
+    margin-top: 250px;
+    margin-left: -220px;
+}
+img#B{
+    width: 200px;
+    height: 150px;
+    border: solid 7px #ABABAB;
+    box-shadow: 0px 0px 10px black;
+}
+img#B:hover{
+    width: 250px;
+    height: 200px;
+    transition: 1s;
+}    
+img#C{
+   width: 200px;
+   border: solid 7px #ABABAB;
+   box-shadow: 0px 0px 10px black;
+}
+img#C:hover{
+    width: 250px;
+    heigth: -20px;
+    transition: 1s;
+}
+/*Formatação do texto*/
+
+p{
+  width: 700px;
+  font-family: 'Baloo Tamma', cursive;
+  color: #494A4A;
+  margin: auto;
+  text-indent: 15px;
+}
+/*Rodapé*/
+
+div#nav{
+    background-color: black;
+}
+div#rodape{
+    background-color: #888888;
+    margin: auto -8px  -8px;
+    padding-bottom: 20px;
+}
+nav#logo{
+    margin-left: 570px;
+}
