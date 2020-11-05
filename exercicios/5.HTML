@@ -19,12 +19,13 @@
 
 </html>
 <script>
-    var quantidade= Number(inpt.value);
     var contador= 0;
 function sortea() {
+    var quantidade= Number(inpt.value);
+    msg.innerHTML="";
     while (contador < quantidade) {
         contador ++;
-        msg.innerHTML+=`${contador}`;
+        msg.innerHTML+=`<br>${contador}`;
     }
 }
 
