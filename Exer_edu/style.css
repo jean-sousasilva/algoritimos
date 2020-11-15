@@ -1,0 +1,9 @@
+.inpt{
+    border: 2px black solid;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+}
+.img{
+    float: right;
+}
