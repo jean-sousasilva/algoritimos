@@ -12,7 +12,7 @@
         } else {
             chipselect_c.style.border = 'red 2px solid'
         
-
+        }
 
 
         if (chipselect_h.value == `h` || chipselect_h.value == `H`) {
@@ -649,4 +649,3 @@
         }
 
     }
-}
