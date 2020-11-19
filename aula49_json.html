@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 49 JSON</title>
+</head>
+<body>
+    <input placeholder="Vit do 1º" id="vitorias1"> <br>
+    <input placeholder="Emp do 1º" id="empates1"> <br>
+    <input placeholder="Derr do 1º" id="derrotas1"> <br>
+    <br>
+    <input placeholder="Vit do 2º" id="vitorias2"> <br>
+    <input placeholder="Emp do 2º" id="empates2"> <br>
+    <input placeholder="Derr do 2º" id="derrotas2"> <br>
+    <br>
+    
+    <button onclick="comparar()">Comparar Campanhas</button>
+    
+    <br>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+    function comparar() {
+        // Aqui criamos 2 JSON - Javascript Simple Object Notation
+        // (JavaScript Object Notation)
+
+        // podemos criar JSONs com let, var ou const.
+
+        // Usamos JSON para AGRUPAR dados que giram em torno de um mesmo 'personagem'
+
+        // time1 é um OBJETO JSON
+        let time1 = {
+            vitorias: Number(vitorias1.value),
+            empates: Number(empates1.value),
+            derrotas: Number(derrotas1.value)
+        };
+  
+        // time2 é um OBJETO JSON
+        var time2 = {
+            vitorias: Number(vitorias2.value),
+            empates: Number(empates2.value),
+            derrotas: Number(derrotas2.value)
+        };
+
+        resultado.innerHTML = `
+            Campanha do time 1: <br>
+            Vitórias: ${time1.vitorias} / Empates: ${time1.empates} / Derrotas: ${time1.derrotas} 
+            <br>
+            Campanha do time 2: <br>
+            Vitórias: ${time2.vitorias} / Empates: ${time2.empates} / Derrotas: ${time2.derrotas} 
+        `;
+
+        // é possível alterar dados de um JSON (mesmo que ele seja uma const)
+        time1.vitorias = 12;
+
+        // é possível incluir dados após a criação de um JSON:
+        
+        // ex: incluindo um 'total_jogos' no time1
+        time1.total_jogos = time1.vitorias + time1.empates + time1.derrotas
+        
+        // ex: incluindo um 'pontos' no time2, consideran que cada vitória vale 3 pontos e cada empate vale 1 ponto. Derrotas não valem nada
+        time2.pontos = time2.vitorias*3 + time2.empates;
+
+        resultado.innerHTML += ` <br>
+            Total de Jogos do time 1: ${time1.total_jogos}
+            <br>
+            Total de Pontos do time 2: ${time2.pontos}
+        `;
+        
+    }
+
+</script>

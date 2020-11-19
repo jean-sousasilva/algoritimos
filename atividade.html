@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <center>
+        <br><br><br><br><br><br><br><br><br>
+    <h1>Comparação dos estados</h1>
+
+    <h2>Estado 1 </h2>
+    <input type="text" placeholder="População" id="e1"><br>
+    <input type="text" placeholder="Rp" id="e2"><br>
+
+    <h2>Estado 2 </h2>
+    <input type="text" placeholder="População" id="e3"><br>
+    <input type="text" placeholder="Rp" id="e4"><br><br>
+
+
+
+    <button onclick="avaliar()">teste</button>
+    <br><br>
+
+    <div id="msg"></div><br><br>
+    <div id="msg2"></div>
+    </center>
+
+</body>
+
+</html>
+
+<script>
+    function avaliar() {
+        let estado1 = {
+            populacao: Number(e1.value),
+            renda: Number(e2.value)
+        };
+
+        let estado2 = {
+            populacao : Number(e3.value),
+            renda: Number(e4.value)
+        };
+
+        msg.innerHTML= `População: ${estado1.populacao} renda: ${estado1.renda}<br><br>
+                        População: ${estado2.populacao} renda: ${estado2.renda}`;
+                        
+        estado1.ir = Number (estado1.populacao /estado1.renda);
+
+        estado2.ir = Number (estado2.populacao / estado2.renda);
+
+        msg2.innerHTML= `Ir do primeiro estado: ${estado1.ir} Ir do segundo estado: ${estado2.ir}`
+
+    }
+
+    
+
+</script>
