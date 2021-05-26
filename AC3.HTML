@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Boi de Ouro</h1>
+
+    Entre com o nome da Fazenda <input type="text" id="fazenda"><br>
+    Entre com a quantidade de Vitelos <input type="number" id="vitelo"><br>
+    Entre com a quantidade de Novilhos <input type="number" id="novilho"><br>
+    Entre com a quantidade de Bois <input type="number" id="boi"><br><br>
+    <button onclick="cadastrar()">Cadastra</button>
+    <button onclick="analisar()">Analisar</button><br><br>
+    <div id="msg"></div>
+    <div id="msg2"></div>
+</body>
+
+</html>
+<script>
+
+    var listar = []
+    var fzdcadastradas = 0;
+    
+    function cadastrar() {
+
+        var cadastro = {
+            fazenda: fazenda.value,
+            vitelos: Number(vitelo.value),
+            novilhos: Number(novilho.value),
+            bois: Number(boi.value)
+
+        };
+
+        if (cadastro.fazenda == "") {
+            alert("Preencher corretamente a Fazenda");
+        } else if (cadastro.vitelos <= 0 || cadastro.novilhos <= 0 || cadastro.bois <= 0) {
+            alert("Informar a quantidade de animais corretamente");
+        } else {
+            listar.push(cadastro);
+            fzdcadastradas += 1;
+        }
+        fazenda.value = ""
+        vitelo.value = ""
+        novilho.value = ""
+        boi.value = ""
+        msg2.display ="block"
+    }
+
+    function analisar() {
+        msg.innerHTML = ""
+        if (listar.length == "") {
+            alert("Favor cadastrar todas as Fazendas com os seus animais");
+        } else {
+
+            var coeficiente = Number(0);
+            var quantidadevitelo = Number(0);
+            var quantidadenovilho = Number(0);
+            var quantidadeboi = Number(0);
+            var fzdlistadas = Number(0);
+            for (var contador = 0; contador < listar.length; contador++) {
+
+                var conta = listar[contador].vitelos * 100 + listar[contador].novilhos * 300 + listar[contador].bois * 500;
+
+                if (listar[contador].vitelos > listar[contador].novilhos && listar[contador].bois) {
+                    msg.innerHTML += `A Fazenda ${listar[contador].fazenda} tem ${listar[contador].vitelos}Vitelo(s), ${listar[contador].novilhos}Novilho(s) e ${listar[contador].bois} boi(s) ${conta}Kg
+                    <br><img src="img/vitelo.jpg" style="height: 60px;"> <br>`;
+
+                } else if (listar[contador].novilhos > listar[contador].bois && listar[contador].vitelos) {
+                    msg.innerHTML += `A Fazenda ${listar[contador].fazenda} tem ${listar[contador].vitelos}Vitelo(s), ${listar[contador].novilhos}Novilho(s) e ${listar[contador].bois} boi(s) ${conta}Kg 
+                    <br><img src="img/novilho.jpg" style="height: 60px;"><br>`;
+
+                } else if (listar[contador].bois > listar[contador].vitelos && listar[contador].novilhos) {
+                    msg.innerHTML += `A Fazenda ${listar[contador].fazenda} tem ${listar[contador].vitelos}Vitelo(s), ${listar[contador].novilhos}Novilho(s) e ${listar[contador].bois} boi(s) ${conta}Kg 
+                    <br><img src="img/boi.jpg" style="height: 60px;"><br>`;
+                }
+                quantidadevitelo += listar[contador].vitelos;
+                quantidadenovilho += listar[contador].novilhos;
+                quantidadeboi += listar[contador].bois;
+                coeficiente += conta;
+                fzdlistadas = contador
+            } msg2.innerHTML = `<br>Coeficiente de análise = ${coeficiente / listar.length}<br> Total de fazendas cadastradas =${fzdcadastradas}<br> Total de fazendas listadas =${fzdlistadas + 1}<br> Total geral de vitelos =${quantidadevitelo}<br>Total geral de novilhos =${quantidadenovilho}<br>Total de bois =${quantidadeboi} `
+              
+        }
+    }
+
+</script>
+<!--
+e. abaixo de cada linha do item anterior emitir a imagem do animal predominante na Fazenda, ou seja: se naquela Fazenda
+tiver mais Vitelos do que Bezerros ou Bois, emitir a imagem vitelo.jpg; se tiver mais Bezerros do que Vitelos ou Bois,
+emitir a imagem do bezerro.jpg; se tiver mais Bois do que Vitelos ou Bezerros, emitir a imagem do boi.jpg. OBS1 se
+houver empate na quantidade majoritária, emitir somente uma imagem respeitando o seguinte critério de desempate:
+primeiro o Vitelo, depois o Bezerro e por último o Boi.
+
+OBS2 - Emitir a imagem com 60 px de altura.
+
+f. ao final emitir as seguintes mensagens:
+
+COEFICIENTE DE ANÁLISE = 999999,9
+
+TOTAL DE FAZENDAS CADASTRADAS = 999
+
+TOTAL DE FAZENDAS LISTADAS = 999
+
+TOTAL GERAL DE VITELOS = 999
+
+TOTAL GERAL DE NOVILHOS = 999
+
+TOTAL GERAL DE BOIS = 999 -->
