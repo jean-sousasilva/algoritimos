@@ -84,7 +84,7 @@ else
         cd Desktop
         mkdir APP
         cd APP
-        git clone https://github.com/GuilhermeMiranda1/BankTrackerDev/raw/main/TelaLogin-JavaSwing/target/TelaLogin-1.0-SNAPSHOT.jar
+        git clone https://github.com/jean-sousasilva/algoritimos/blob/main/app-banktracker/target/app-banktracker-1.0-SNAPSHOT-jar-with-dependencies.jar
 
         echo "$(tput setaf 10)[Btzinho bot]:$(tput setaf 7) JAR instaldo Gostaria de abrir o JAR?;"
         echo "$(tput setaf 10)[Btzinho bot]:$(tput setaf 7) Confirme para mim se realmente deseja Abrir o JAR (S/N)?"
