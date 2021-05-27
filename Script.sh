@@ -62,13 +62,13 @@ else
         exit
     fi
 fi
-if [ $? = APP ]; then
+if [ $? = app-banktracker-1.0-SNAPSHOT-jar-with-dependencies.jar ]; then
     echo "$(tput setaf 10)[Btzinho bot]:$(tput setaf 7) Gostaria de abrir o JAR?;"
     echo "$(tput setaf 10)[Btzinho bot]:$(tput setaf 7) Confirme para mim se realmente deseja Abrir o JAR (S/N)?"
     read inst
     if [ \"$inst\" == \"s\" ]; then
         echo "$(tput setaf 10)[Btzinho bot]:$(tput setaf 7) Abrindo o JAR;"
-        java -jar TelaLogin-1.0-SNAPSHOT.jar
+        java -jar app-banktracker-1.0-SNAPSHOT-jar-with-dependencies.jar
 
     else
         echo "$(tput setaf 10)[Btzinho bot]:$(tput setaf 7) Você optou por não Abrir o JAR, até a próxima então!"
@@ -91,7 +91,10 @@ else
         read inst
         if [ \"$inst\" == \"s\" ]; then
             echo "$(tput setaf 10)[Btzinho bot]:$(tput setaf 7) Abrindo o JAR;"
-            java -jar TelaLogin-1.0-SNAPSHOT.jar
+            cd ~
+            cd Desktop
+            cd APP
+            java -jar app-banktracker-1.0-SNAPSHOT-jar-with-dependencies.jar
 
         else
             echo "$(tput setaf 10)[Btzinho bot]:$(tput setaf 7) Você optou por não Abrir o JAR, até a próxima então!"
