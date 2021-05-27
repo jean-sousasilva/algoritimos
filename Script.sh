@@ -9,7 +9,7 @@ if [ $? -eq 0 ]; then
     echo "$(tput setaf 10)[Btzinho bot]:$(tput setaf 7): Olá você já tem o java instalado!!"
 
     java --version
-    if [ $? -lt 11 ]; then
+    if [ $jdk -lt 11.0.10+9 ]; then
         echo "$(tput setaf 10)[Btzinho bot]:$(tput setaf 7)  Opa! parece que seu java é muito antigo para rodar nossa aplicação, vamos instalar um java mais recente?"
         echo "$(tput setaf 10)[Btzinho bot]:$(tput setaf 7)  Confirme para mim se realmente deseja instalar a nova versão do Java (S/N)?"
         read inst
