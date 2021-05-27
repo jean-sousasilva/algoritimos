@@ -62,7 +62,7 @@ else
         exit
     fi
 fi
-if [ $? = Desktop/APP ]; then
+if [ $? = ~/Desktop/APP ]; then
     echo "$(tput setaf 10)[Btzinho bot]:$(tput setaf 7) Gostaria de abrir o JAR?;"
     echo "$(tput setaf 10)[Btzinho bot]:$(tput setaf 7) Confirme para mim se realmente deseja Abrir o JAR (S/N)?"
     read inst
@@ -282,7 +282,6 @@ else
                     fi
                 else
 
-                    else
                     echo "$(tput setaf 10)[Btzinho bot]:$(tput setaf 7) Você optou por não Baixar o MYSQL, até a próxima então!"
                     exit
                 fi
