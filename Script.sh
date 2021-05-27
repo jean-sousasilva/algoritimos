@@ -68,6 +68,9 @@ if [ $? = app-banktracker-1.0-SNAPSHOT-jar-with-dependencies.jar ]; then
     read inst
     if [ \"$inst\" == \"s\" ]; then
         echo "$(tput setaf 10)[Btzinho bot]:$(tput setaf 7) Abrindo o JAR;"
+        cd app-banktracker
+        cd target
+
         java -jar app-banktracker-1.0-SNAPSHOT-jar-with-dependencies.jar
 
     else
@@ -80,17 +83,17 @@ else
     read inst
     if [ \"$inst\" == \"s\" ]; then
         echo "$(tput setaf 10)[Btzinho bot]:$(tput setaf 7) Baixando o JAR;"
-       
-        git clone https://github.com/jean-sousasilva/algoritimos/blob/main/app-banktracker/target/app-banktracker-1.0-SNAPSHOT-jar-with-dependencies.jar
+
+        git clone https://github.com/jean-sousasilva/algoritimos/tree/main/app-banktracker
 
         echo "$(tput setaf 10)[Btzinho bot]:$(tput setaf 7) JAR instaldo Gostaria de abrir o JAR?;"
         echo "$(tput setaf 10)[Btzinho bot]:$(tput setaf 7) Confirme para mim se realmente deseja Abrir o JAR (S/N)?"
         read inst
         if [ \"$inst\" == \"s\" ]; then
             echo "$(tput setaf 10)[Btzinho bot]:$(tput setaf 7) Abrindo o JAR;"
-            cd ~
-            cd Desktop
-            cd APP
+            cd app-banktracker
+            cd target
+
             java -jar app-banktracker-1.0-SNAPSHOT-jar-with-dependencies.jar
 
         else
