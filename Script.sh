@@ -109,7 +109,7 @@ fi
 #Script docker
 
 docker --version
-if [ $? = -eq 0]; then
+if [ $? = -eq 0 ]; then
     echo "$(tput setaf 10)[Btzinho bot]:$(tput setaf 7) Opa você não tem o docker instalado!!"
     echo "$(tput setaf 10)[Btzinho bot]:$(tput setaf 7) Confirme para mim se quer instalar o docker (S/N)?"
     read inst
