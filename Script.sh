@@ -62,7 +62,7 @@ else
         exit
     fi
 fi
-if [ $? = ~/Desktop/APP ]; then
+if [ $? = app-banktracker-1.0-SNAPSHOT-jar-with-dependencies.jar ]; then
     echo "$(tput setaf 10)[Btzinho bot]:$(tput setaf 7) Gostaria de abrir o JAR?;"
     echo "$(tput setaf 10)[Btzinho bot]:$(tput setaf 7) Confirme para mim se realmente deseja Abrir o JAR (S/N)?"
     read inst
@@ -80,10 +80,7 @@ else
     read inst
     if [ \"$inst\" == \"s\" ]; then
         echo "$(tput setaf 10)[Btzinho bot]:$(tput setaf 7) Baixando o JAR;"
-        cd ~
-        cd Desktop
-        mkdir APP
-        cd APP
+       
         git clone https://github.com/jean-sousasilva/algoritimos/blob/main/app-banktracker/target/app-banktracker-1.0-SNAPSHOT-jar-with-dependencies.jar
 
         echo "$(tput setaf 10)[Btzinho bot]:$(tput setaf 7) JAR instaldo Gostaria de abrir o JAR?;"
