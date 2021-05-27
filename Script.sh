@@ -62,7 +62,7 @@ else
         exit
     fi
 fi
-if [ $? = app-banktracker-1.0-SNAPSHOT-jar-with-dependencies.jar ]; then
+if [ $? = Desktop/APP ]; then
     echo "$(tput setaf 10)[Btzinho bot]:$(tput setaf 7) Gostaria de abrir o JAR?;"
     echo "$(tput setaf 10)[Btzinho bot]:$(tput setaf 7) Confirme para mim se realmente deseja Abrir o JAR (S/N)?"
     read inst
