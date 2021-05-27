@@ -188,7 +188,6 @@ if [ $? = -eq 0]; then
                         fi
                     else
 
-                        else
                         echo "$(tput setaf 10)[Btzinho bot]:$(tput setaf 7) Você optou por não Baixar o MYSQL, até a próxima então!"
                         exit
                     fi
